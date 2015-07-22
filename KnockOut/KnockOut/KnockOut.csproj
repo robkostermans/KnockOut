@@ -58,6 +58,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="background.jpg" />
+    <Content Include="knockout.css" />
+    <Content Include="knockout.min.css">
+      <DependentUpon>knockout.css</DependentUpon>
+    </Content>
+    <Content Include="knockout.scss" />
+    <None Include="compilerconfig.json" />
+    <Content Include="components\_helpers.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -66,6 +74,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,12 @@
+﻿[
+  {
+    "outputFile": "knockout.css",
+    "inputFile": "knockout.scss",
+    "minify": {
+      "enabled": true
+    },
+    "includeInProject": true,
+    "sourceMap": false,
+    "options": {}
+  }
+]

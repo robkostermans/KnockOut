@@ -1,0 +1,80 @@
+﻿body {
+  margin: 0;
+  background-color: #f2f2f2;
+  color: #333; }
+
+article {
+  background-color: #fff;
+  font-weight: 300; }
+  @media only screen and (min-width: 360) {
+    article {
+      font-size: 1.2rem; } }
+  @media only screen and (min-width: 390) {
+    article {
+      font-size: 1.224rem; } }
+  @media only screen and (min-width: 420) {
+    article {
+      font-size: 1.248rem; } }
+  @media only screen and (min-width: 450) {
+    article {
+      font-size: 1.272rem; } }
+  @media only screen and (min-width: 480) {
+    article {
+      font-size: 1.296rem; } }
+  @media only screen and (min-width: 510) {
+    article {
+      font-size: 1.32rem; } }
+  @media only screen and (min-width: 540) {
+    article {
+      font-size: 1.344rem; } }
+  @media only screen and (min-width: 570) {
+    article {
+      font-size: 1.368rem; } }
+  @media only screen and (min-width: 600) {
+    article {
+      font-size: 1.392rem; } }
+  @media only screen and (min-width: 630) {
+    article {
+      font-size: 1.416rem; } }
+  @media only screen and (min-width: 660) {
+    article {
+      font-size: 1.44rem; } }
+  @media only screen and (min-width: 690) {
+    article {
+      font-size: 1.464rem; } }
+  @media only screen and (min-width: 720) {
+    article {
+      font-size: 1.488rem; } }
+  @media only screen and (min-width: 750) {
+    article {
+      font-size: 1.512rem; } }
+  @media only screen and (min-width: 780) {
+    article {
+      font-size: 1.536rem; } }
+  @media only screen and (min-width: 810) {
+    article {
+      font-size: 1.56rem; } }
+  @media only screen and (min-width: 840) {
+    article {
+      font-size: 1.584rem; } }
+  @media only screen and (min-width: 870) {
+    article {
+      font-size: 1.608rem; } }
+  @media only screen and (min-width: 900) {
+    article {
+      font-size: 1.632rem; } }
+  @media only screen and (min-width: 930) {
+    article {
+      font-size: 1.656rem; } }
+  @media only screen and (min-width: 960) {
+    article {
+      font-size: 1.68rem; } }
+
+header {
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  header h1 {
+    margin: 0; }
