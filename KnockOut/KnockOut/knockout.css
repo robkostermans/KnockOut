@@ -64,7 +64,8 @@ article {
   article section {
     font-weight: 300;
     background-color: #fff;
-    flex: 1; }
+    flex: 1 0 0;
+    margin-top: -2px; }
     @media only screen and (min-width: 360px) {
       article section {
         font-size: 1.2rem; } }
@@ -142,14 +143,11 @@ header {
   text-align: center;
   display: block;
   align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text; }
+  justify-content: center; }
   header h1 {
     margin: 0;
     font-size: 6rem;
-    font-weight: 500; }
+    font-weight: 700; }
 
 .slabtexted .slabtext {
   display: -moz-inline-box;

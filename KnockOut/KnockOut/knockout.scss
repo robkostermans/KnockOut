@@ -30,7 +30,9 @@ article{
     section{
         @include flow-text();
         background-color:#fff;
-         flex: 1;
+        flex: 1 0 0;
+        
+        margin-top:-2px;
     }
     footer{
         background-color:#333;
@@ -48,19 +50,19 @@ article{
 
 header{
     text-align:center;
-    //min-height:50vh;
+    //height:50vh;
     display:block;
     align-items: center;
     justify-content: center;
 
-    background-color:#f2f2f2;
-    -webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
+    //background-color:#f2f2f2;
+    //-webkit-text-fill-color: transparent;
+	//-webkit-background-clip: text;
 
     h1{
         margin:0;
         font-size:6rem;
-        font-weight:500;
+        font-weight:700;
     }
 }
 
