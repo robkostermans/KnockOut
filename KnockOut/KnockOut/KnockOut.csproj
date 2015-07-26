@@ -66,6 +66,7 @@
     <Content Include="knockout.scss" />
     <None Include="compilerconfig.json" />
     <Content Include="components\_helpers.scss" />
+    <Content Include="components\_reset.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

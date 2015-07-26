@@ -1,31 +1,92 @@
 ﻿@import 'components/_helpers.scss';
+@import 'components/_reset.scss';
+
 
 $small-screen : 600px;
 $medium-screen : 992px;
 $large-screen : 1200px;
 $range : $large-screen - $small-screen;
 
+html{
+    font-size:12px;
+}
+
 body{
-    margin:0;
     background-color:#f2f2f2;
     color:#333;
-
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f2f2f2 url('background.jpg') no-repeat top center;
+    background-attachment:fixed;
+    background-size:cover;
 }
 
 article{
-    background-color:#fff;
-    @include flow-text();
+    background-color:transparent;
+    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    header{}
+    section{
+        @include flow-text();
+        background-color:#fff;
+         flex: 1;
+    }
+    footer{
+        background-color:#333;
+        color:#fff;
+    }
 }
+
+.inner{
+    max-width:1200px;
+    margin:auto;
+    overflow:hidden;
+    padding:1rem;
+}
+
 
 header{
     text-align:center;
-    min-height:50vh;
-    display:flex;
+    //min-height:50vh;
+    display:block;
     align-items: center;
     justify-content: center;
+
+    background-color:#f2f2f2;
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+
     h1{
         margin:0;
+        font-size:6rem;
+        font-weight:500;
     }
 }
 
 
+
+
+//
+//
+//
+.slabtexted .slabtext
+        {
+        display:-moz-inline-box;
+        display:inline-block;
+        white-space:nowrap;
+        }
+.slabtextinactive .slabtext
+        {
+        display:inline;
+        white-space:normal;
+        font-size:1em !important;
+        letter-spacing:inherit !important;
+        word-spacing:inherit !important;
+        *letter-spacing:0 !important;
+        *word-spacing:0 !important;
+        }
+.slabtextdone .slabtext
+        {
+        display:block;
+        }
