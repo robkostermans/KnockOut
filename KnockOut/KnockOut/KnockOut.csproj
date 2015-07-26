@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="background.jpg" />
+    <Content Include="components\jquery.svg.slabtext.js" />
     <Content Include="knockout.css" />
     <Content Include="knockout.min.css">
       <DependentUpon>knockout.css</DependentUpon>
