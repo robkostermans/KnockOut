@@ -8,23 +8,29 @@
 </head>
 <body>
     <article>
-        <header>
-            <div class="xinner">
-                <h1 class="applySlabText">New engine of applying composed looks in SharePoint&nbsp;Online </h1>
-                
-                <svg viewBox="0 0 100 50">
+        <header><img class="img-src" src="background.jpg"/>
+            <div class="inner">
+               
+                <h1 class="axpplySlabText">
+                    New engine of applying composed looks in SharePoint Online
+                </h1>
+                <!--<svg viewBox="0 0 100 50">
                     <defs>
                         <mask id="mask" x="0" y="0" width="100" height="50">
                             <rect x="0" y="0" width="100" height="50" fill="#fff" />
-                            <!--<text text-anchor="middle" x="50" y="18" dy="1">SVG</text>
-                            <text style="  font-size: 14px; font-weight: bold;word-spacing: 0px; letter-spacing: 0px;" text-anchor="middle" x="50" y="30" dy="1">SharePoint Online</text>-->
+                            <text text-anchor="middle" x="50" y="18" dy="1">SVG</text>
+                            <text text-anchor="middle" x="50" y="30" dy="1">Text mask</text>
                         </mask>
                     </defs>
                     <rect x="0" y="0" width="100" height="50" mask="url(#mask)" fill-opacity="1" fill="#fff" />
                 </svg>
+                    -->
             </div>
         </header>
         <section>
+            <div class="image">
+                
+            </div>
             <div class="inner">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et metus eget nisi elementum porttitor. Suspendisse sed nulla dui. Vivamus porta gravida nunc vel imperdiet. Donec vitae efficitur eros. Vivamus tincidunt quis mauris mattis venenatis. Donec eu odio sem. Nam cursus feugiat orci, vel imperdiet est eleifend sed. Vestibulum ultrices ut sem in interdum. Nullam non volutpat massa. Sed maximus sapien sit amet blandit suscipit. Vivamus mi nunc, tempor id felis ut, convallis convallis urna. Sed sed ullamcorper lorem. Pellentesque aliquet ipsum ac ex posuere posuere.</p>
                 <p>Morbi mattis accumsan diam, sed viverra sapien vehicula id. Nulla facilisi. Pellentesque blandit, ante ut molestie tincidunt, dolor enim porttitor felis, quis volutpat odio mauris id ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis non eros non nisl iaculis dictum non nec sem. Integer neque dui, hendrerit id vestibulum vitae, cursus sit amet elit. Quisque non lorem nec nisl imperdiet facilisis. Suspendisse quis diam eu sem tincidunt elementum eu in tortor. Quisque tortor mi, varius nec dui ac, mollis ullamcorper sapien. Quisque ut felis luctus, tincidunt est id, finibus quam. Aenean aliquam odio ac nulla mollis vestibulum. Aliquam hendrerit diam et blandit pharetra. Quisque dolor ante, dapibus pharetra semper eget, tristique at leo. Suspendisse eget tempor leo. Quisque a pellentesque erat. Suspendisse a lacinia metus.</p>
@@ -32,19 +38,41 @@
                 <p>Nulla tincidunt dui imperdiet, ultricies lacus eu, ornare augue. Mauris volutpat aliquet eros, ut lobortis felis gravida iaculis. Aliquam aliquet ultrices augue vitae pellentesque. Integer mattis at augue nec consequat. Praesent a sem justo. In hac habitasse platea dictumst. Curabitur sit amet risus non velit lobortis porta. Curabitur eget velit turpis. Pellentesque interdum consectetur augue. Quisque vel libero lacinia, finibus nisl id, pulvinar mauris. Vestibulum blandit neque eu molestie posuere. Integer nec est ullamcorper turpis mollis cursus. Pellentesque tempor ante ac ligula sollicitudin, in dignissim erat sodales. Curabitur in iaculis purus. Fusce quis maximus turpis.</p>
             </div>
         </section>
-        <footer><div class="inner">me myself & I</div></footer>
+        <!--<footer><div class="inner"></div></footer>-->
     </article>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/slabText/2.3/jquery.slabtext.min.js"></script>-->
-    <script src="components/jquery.svg.slabtext.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slabText/2.3/jquery.slabtext.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
     <script>
-        $(window).ready(function () {
+        /*$(document).ready(function () {
             console.log("ready...")
             $(".applySlabText").slabText({
                 "viewportBreakpoint": 360
-            });
-        });
+            })
+        });*/
+
+        $("header").on('click', function () { $("body").toggleClass('invert'); });
+
+        setColorBasedOnImage = function (img) {
+            if ($(img).attr('src')) {
+                if (!$(img).attr("data-accent-f-color")) {
+                    img = $(img).get(0);
+                    var vibrant = new Vibrant(img);
+                    var swatches = vibrant.swatches(); //Vibrant , Muted , DarkVibrant , DarkMuted , LightVibrant
+                    $(img).attr("data-accent-f-color", swatches["Vibrant"].getHex())
+                    accentFCcolor = swatches["Vibrant"].getHex();
+                } else {
+                    accentFCcolor = $(img).attr("data-accent-f-color");
+                }
+                $("header .inner").css('background-color', accentFCcolor)
+            } else {
+                $("header .inner").css('background-color', '')
+            }
+        }
+
+        setColorBasedOnImage($("header").find(".img-src"));
+        
     </script>
 </body>
 </html>
