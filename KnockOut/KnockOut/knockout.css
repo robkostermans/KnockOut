@@ -52,25 +52,22 @@ html {
 body {
   background-color: #f2f2f2;
   color: #333;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden; }
-  body.invert {
-    overflow: auto; }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
 article {
   background-color: transparent;
-  margin-left: 50vw;
   min-height: 100vh;
   xflex-direction: column; }
 
 .inner {
+  max-width: 1200px;
+  margin: auto;
   padding: 2rem;
   box-sizing: border-box; }
 
 section {
   font-weight: 300;
   background-color: #fff;
-  color: #fff;
   flex: 1 0 0;
   min-height: 100vh;
   margin-top: -2px;
@@ -139,9 +136,8 @@ section {
   @media only screen and (min-width: 960px) {
     section {
       font-size: 1.68rem; } }
-  .invert section {
-    color: #333; }
   section .image {
+    display: none;
     z-index: 300;
     width: 50vw;
     height: 100vh;
@@ -159,13 +155,15 @@ section {
 
 header {
   height: 100vh;
-  width: 50vw;
-  position: fixed;
+  width: 100vw;
+  transition: height 0.15s ease-in-out;
   left: 0;
   top: 0;
   z-index: 500;
   display: block;
   font-size: 19vw; }
+  .reveal header {
+    height: 75vh; }
   header .img-src {
     width: 10px;
     display: none; }
@@ -175,24 +173,27 @@ header {
     width: 100%;
     background-image: url("background.jpg");
     background-size: cover;
-    background-position: 50vw center;
     background-repeat: no-repeat;
     transition: background 0.25s ease-in; }
   header h1 {
-    text-shadow: 0 0 0px #000000;
+    text-shadow: 0 0 10px #000000;
     transition: all 0.25s ease-in;
     box-sizing: border-box;
     padding: 2rem;
-    text-align: right;
+    padding-top: 12rem;
+    text-align: left;
     margin: 0;
     font-size: 6vw;
     font-weight: 700;
+    color: #fff;
+    height: 100%; }
+  .reveal header .inner {
+    background-position: center center; }
+  .reveal header h1 {
+    text-shadow: 0 0 0px #000000;
     color: #000;
-    height: 100%;
     background-color: #fff;
     mix-blend-mode: lighten; }
-  .invert header .inner {
-    background-position: center center; }
 
 .slabtexted .slabtext {
   display: -moz-inline-box;

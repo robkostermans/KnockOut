@@ -16,15 +16,15 @@ body{
     background-color:#f2f2f2;
     color:#333;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow:hidden;
-    &.invert{overflow:auto;}
+    //overflow:hidden;
+    //&.invert{overflow:auto;}
 
 }
 
 article{
     background-color:transparent;
      
-    margin-left:50vw;
+    //margin-left:50vw;
     //display: flex;
     min-height: 100vh;
     xflex-direction: column;
@@ -37,8 +37,8 @@ article{
 }
 
 .inner{
-    //max-width:1200px;
-    //margin:auto;
+    max-width:1200px;
+    margin:auto;
     //overflow:hidden;
     padding:2rem;
     box-sizing:border-box;
@@ -48,9 +48,9 @@ article{
 section{
         @include flow-text();
         background-color:#fff;
-        color:#fff;
+        //color:#fff;
         .invert &{
-            color:#333;
+            //color:#333;
         }
         flex: 1 0 0;
         min-height:100vh;
@@ -58,6 +58,7 @@ section{
         line-height:2rem;
         transition:color 0.35s ease-in;
         .image{
+            display:none;
             z-index:300;
             width:50vw;
             height:100vh;
@@ -85,8 +86,14 @@ section{
 
 header{
     height:100vh;
-    width:50vw;
-    position:fixed;
+    width:100vw;
+    transition:height 0.15s ease-in-out;
+    .reveal & {
+        height:75vh;
+    //-webkit-transform: translateY(-25%);
+    //transform: translateY(-25%);
+    } 
+    //position:fixed;
     left:0;
     top:0;
     z-index:500;
@@ -102,34 +109,35 @@ header{
         width:100%;
         background-image:url('background.jpg');
         background-size:cover;
-        background-position:50vw center;
+        //background-position:50vw center;
         background-repeat:no-repeat;
          transition:background 0.25s ease-in;
     }
     h1{
-        text-shadow: 0 0 0px #000000;
-            
+        text-shadow: 0 0 10px #000000;
         transition:all 0.25s ease-in;
         box-sizing:border-box;
         padding:2rem;
-        text-align:right;
+        padding-top:12rem;
+        
+        text-align:left;
         margin:0;
         font-size:6vw;
         font-weight:700;
-        color:#000;
+        color:#fff;
         height:100%;
-        background-color:#fff;
-        mix-blend-mode: lighten;
+        //background-color:#000;
+        //mix-blend-mode: darken;
     }
-    .invert &{
+    .reveal &{
         .inner{
             background-position:center center;
             }
         h1{
-            //text-shadow: 0 0 10px #000000;
-            //color:#fff;
-            //background-color:#000;
-            //mix-blend-mode: ligthen;
+            text-shadow: 0 0 0px #000000;
+            color:#000;
+            background-color:#fff;
+            mix-blend-mode: lighten;
         }
         
         //

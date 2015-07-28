@@ -59,7 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="background.jpg" />
+    <Content Include="components\fadein.js" />
     <Content Include="components\jquery.svg.slabtext.js" />
+    <Content Include="components\orgeffect.js" />
     <Content Include="knockout.css" />
     <Content Include="knockout.min.css">
       <DependentUpon>knockout.css</DependentUpon>
